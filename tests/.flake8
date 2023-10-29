@@ -9,7 +9,14 @@ ignore =
     F,
     N,
     C,
-    I
+    I,
+    W291.
+    E303,
+    E302,
+    E501,
+    E128,
+    W293,
+    W291
 max-line-length = 79
 exclude = 
     .tox,
