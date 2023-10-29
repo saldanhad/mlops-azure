@@ -23,8 +23,8 @@ def main(args):
     # Train model
     train_model(args.reg_rate, X_train, X_test, y_train, y_test)
 
-def get_csvs_df(path):
-    
+
+def get_csvs_df(path): 
     if not os.path.exists(path):
         raise RuntimeError(f"Cannot use a non-existent path provided: {path}")
     csv_files = glob.glob(f"{path}/*.csv")
@@ -32,14 +32,15 @@ def get_csvs_df(path):
         raise RuntimeError(f"No CSV files found in path: {path}")
     return pd.concat((pd.read_csv(f) for f in csv_files), sort=True)  # Set sort=True if column order matters
 
-# TO DO: add a function to split data
 
+# TO DO: add a function to split data
 def split_data(df):
     X = df[['Pregnancies', 'PlasmaGlucose', 'DiastolicBloodPressure', 'TricepsThickness', 'SerumInsulin', 'BMI', 'DiabetesPedigree', 'Age']].values
     y = df['Diabetic'].values
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
     return X_train, X_test, y_train, y_test
+
 
 def train_model(reg_rate, X_train, X_test, y_train, y_test):
     # Train model
@@ -75,4 +76,3 @@ if __name__ == "__main__":
     # Add space in logs
     print("*" * 60)
     print("\n\n")
-
