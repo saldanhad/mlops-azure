@@ -1,4 +1,4 @@
-name: Quality check on PR
+name: Quality check on Pull Request
 
 on:
   pull_request:
