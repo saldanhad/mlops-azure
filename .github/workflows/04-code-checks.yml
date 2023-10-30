@@ -6,6 +6,7 @@ on:
       - dev
       - main
 
+
 jobs:
   test-and-merge-status:
     runs-on: ubuntu-latest
