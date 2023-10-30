@@ -26,7 +26,7 @@ jobs:
           
       - name: Run pytest tests
         run: |
-          python tests/test_train.py
+          python tests/
 
       - name: Check test results and provide merge status
         run: |
